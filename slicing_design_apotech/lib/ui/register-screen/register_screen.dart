@@ -63,7 +63,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           controller: cUsername,
                           cursorColor: primaryColor,
                           decoration: InputDecoration(
-                            label: labelText(),
+                            label: labelTextYourName(),
                             hintText: 'Yourname',
                             hintStyle: TextStyle(
                               fontSize: 15,
@@ -90,26 +90,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Row(
                 children: [
                   SizedBox(width: 8),
-                  Opacity(
-                    opacity: 0.45,
-                    child: Text(
-                      'Mobile Number',
-                      style: TextStyle(
-                        fontFamily: 'Arial',
-                        fontSize: 11,
-                        fontWeight: FontWeight.w400,
-                        color: borderColor.withOpacity(0.45),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 0),
-              child: Row(
-                children: [
-                  SizedBox(width: 8),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -118,6 +98,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           controller: cPassword,
                           cursorColor: primaryColor,
                           decoration: InputDecoration(
+                            label: labelTextMobileNumber(),
                             hintText: 'Mobile Number',
                             hintStyle: TextStyle(
                               fontSize: 15,
@@ -144,26 +125,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Row(
                 children: [
                   SizedBox(width: 8),
-                  Opacity(
-                    opacity: 0.45,
-                    child: Text(
-                      'Email',
-                      style: TextStyle(
-                        fontFamily: 'Arial',
-                        fontSize: 11,
-                        fontWeight: FontWeight.w400,
-                        color: borderColor.withOpacity(0.45),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 0),
-              child: Row(
-                children: [
-                  SizedBox(width: 8),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -172,6 +133,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           controller: cEmail,
                           cursorColor: primaryColor,
                           decoration: InputDecoration(
+                            label: labelTextEmail(),
                             hintText: 'Email',
                             hintStyle: TextStyle(
                               fontSize: 15,
@@ -198,26 +160,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Row(
                 children: [
                   SizedBox(width: 8),
-                  Opacity(
-                    opacity: 0.45,
-                    child: Text(
-                      'Password',
-                      style: TextStyle(
-                        fontFamily: 'Arial',
-                        fontSize: 11,
-                        fontWeight: FontWeight.w400,
-                        color: borderColor.withOpacity(0.45),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 0),
-              child: Row(
-                children: [
-                  SizedBox(width: 8),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -226,6 +168,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           controller: cPassword,
                           cursorColor: primaryColor,
                           decoration: InputDecoration(
+                            label: labelTextPassword(),
                             hintText: 'Password',
                             hintStyle: TextStyle(
                               fontSize: 15,
@@ -264,23 +207,82 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
             ),
-            Spacer(),
-            Center(
-              child: Text(
-                "Don’t have an account? Sign Up",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: borderColor.withOpacity(0.45),
-                ),
-              ),
-            ),
           ],
         ),
       ),
     );
   }
 
-  Padding labelText() {
+  Padding labelTextPassword() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 0),
+      child: Row(
+        children: [
+          SizedBox(width: 8),
+          Opacity(
+            opacity: 0.45,
+            child: Text(
+              'Password',
+              style: TextStyle(
+                fontFamily: 'Arial',
+                fontSize: 11,
+                fontWeight: FontWeight.w400,
+                color: borderColor.withOpacity(0.45),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding labelTextEmail() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 0),
+      child: Row(
+        children: [
+          SizedBox(width: 8),
+          Opacity(
+            opacity: 0.45,
+            child: Text(
+              'Email',
+              style: TextStyle(
+                fontFamily: 'Arial',
+                fontSize: 11,
+                fontWeight: FontWeight.w400,
+                color: borderColor.withOpacity(0.45),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding labelTextMobileNumber() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 0),
+      child: Row(
+        children: [
+          SizedBox(width: 8),
+          Opacity(
+            opacity: 0.45,
+            child: Text(
+              'Mobile Number',
+              style: TextStyle(
+                fontFamily: 'Arial',
+                fontSize: 11,
+                fontWeight: FontWeight.w400,
+                color: borderColor.withOpacity(0.45),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding labelTextYourName() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 0),
       child: Row(
