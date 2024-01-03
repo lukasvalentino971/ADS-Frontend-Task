@@ -54,6 +54,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 primary: primaryColor, // Change to your desired color
                 onPrimary: Colors.white, // Change to your desired color
                 fixedSize: Size(311, 50),
+                shadowColor: primaryColor, // Set shadow color to primaryColor
+                elevation: 5, // Adjust the elevation (blur) of the shadow
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(
+                //       8), // Adjust the border radius if needed
+                // ),
               ),
               child: Text(
                 'SIGN UP WITH EMAIL',

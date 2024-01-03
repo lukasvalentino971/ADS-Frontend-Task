@@ -127,15 +127,21 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-                // Handle "Sign up with email" button press
+                //Navigation.replaceNamed(routeName: HomeScreen.routeName);
               },
               style: ElevatedButton.styleFrom(
                 primary: primaryColor, // Change to your desired color
                 onPrimary: Colors.white, // Change to your desired color
                 fixedSize: Size(311, 50),
+                shadowColor: primaryColor, // Set shadow color to primaryColor
+                elevation: 5, // Adjust the elevation (blur) of the shadow
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(
+                //       8), // Adjust the border radius if needed
+                // ),
               ),
               child: Text(
-                'MASUK',
+                'LOGIN',
                 style: GoogleFonts.overpass(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
@@ -149,12 +155,23 @@ class _LoginScreenState extends State<LoginScreen> {
                   // Tambahkan fungsi untuk pindah ke halaman RegisterScreen
                   Navigation.replaceNamed(routeName: RegisterScreen.routeName);
                 },
-                child: Text(
-                  "Don’t have an account? Sign Up",
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: borderColor.withOpacity(0.45),
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.arrow_back_ios_new,
+                      color: borderColor.withOpacity(0.45),
+                    ),
+                    SizedBox(
+                        width: 8), // Adjust the spacing between icon and text
+                    Text(
+                      "Don’t have an account? Sign Up",
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: borderColor.withOpacity(0.45),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
