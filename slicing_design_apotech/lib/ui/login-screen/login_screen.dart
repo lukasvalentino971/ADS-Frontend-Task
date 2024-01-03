@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.all(12.0),
           child: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
               style: ElevatedButton.styleFrom(
                 primary: primaryColor, // Change to your desired color
                 onPrimary: Colors.white, // Change to your desired color
-                fixedSize: Size(311, 50),
+                fixedSize: Size(double.maxFinite, 50),
                 shadowColor: primaryColor, // Set shadow color to primaryColor
                 elevation: 5, // Adjust the elevation (blur) of the shadow
                 // shape: RoundedRectangleBorder(

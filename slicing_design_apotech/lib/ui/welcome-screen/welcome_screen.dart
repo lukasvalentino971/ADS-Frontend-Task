@@ -19,7 +19,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -53,7 +53,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               style: ElevatedButton.styleFrom(
                 primary: primaryColor, // Change to your desired color
                 onPrimary: Colors.white, // Change to your desired color
-                fixedSize: Size(311, 50),
+                fixedSize: Size(double.maxFinite, 50),
                 shadowColor: primaryColor, // Set shadow color to primaryColor
                 elevation: 5, // Adjust the elevation (blur) of the shadow
                 // shape: RoundedRectangleBorder(
@@ -81,7 +81,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   color: borderColor
                       .withOpacity(0.10), // Add border color with opacity
                 ),
-                fixedSize: Size(311, 50),
+                fixedSize: Size(double.maxFinite, 50),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -117,7 +117,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   color: borderColor
                       .withOpacity(0.10), // Add border color with opacity
                 ),
-                fixedSize: Size(311, 50),
+                fixedSize: Size(double.maxFinite, 50),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
 import 'package:slicing_design_apotech/common/styles.dart';
 import 'package:slicing_design_apotech/ui/login-screen/login_screen.dart';
+import 'package:slicing_design_apotech/ui/verify-otp/verify_otp.dart';
 import 'package:slicing_design_apotech/ui/welcome-screen/welcome_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -194,12 +195,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    // Handle "Sign up with email" button press
+                    Navigation.replaceNamed(routeName: VerifyScreen.routeName);
                   },
                   style: ElevatedButton.styleFrom(
                     primary: primaryColor, // Change to your desired color
                     onPrimary: Colors.white, // Change to your desired color
-                    fixedSize: Size(311, 50),
+                    fixedSize: Size(double.maxFinite, 50),
                     shadowColor:
                         primaryColor, // Set shadow color to primaryColor
                     elevation: 5, // Adjust the elevation (blur) of the shadow
