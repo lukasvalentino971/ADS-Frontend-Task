@@ -25,11 +25,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('assets/images/ilustrasi-4.png'),
-            SizedBox(height: 16),
+            SizedBox(height: 24),
             Text(
               'Welcome to Apotech',
               style: GoogleFonts.overpass(
-                fontSize: 32,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -39,9 +39,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               child: Text(
                 'Do you want some help with your health to get better life?',
                 style: GoogleFonts.overpass(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w300,
-                ),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w300,
+                    color: borderColor.withOpacity(0.45)),
                 textAlign: TextAlign.center,
               ),
             ),

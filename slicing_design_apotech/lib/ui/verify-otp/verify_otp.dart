@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
 import 'package:slicing_design_apotech/common/styles.dart';
+import 'package:slicing_design_apotech/ui/login-success/login_success.dart';
 import 'package:slicing_design_apotech/ui/register-screen/register_screen.dart';
 import 'package:slicing_design_apotech/ui/welcome-screen/welcome_screen.dart';
 
@@ -83,7 +84,8 @@ class _VerifyScreenState extends State<VerifyScreen> {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigation.replaceNamed(routeName: VerifyScreen.routeName);
+                  Navigation.replaceNamed(
+                      routeName: LoginSuccessScreen.routeName);
                 },
                 style: ElevatedButton.styleFrom(
                   primary: primaryColor, // Change to your desired color
