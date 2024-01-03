@@ -195,7 +195,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigation.replaceNamed(routeName: VerifyScreen.routeName);
+                    Navigation.replaceNamed(routeName: LoginScreen.routeName);
                   },
                   style: ElevatedButton.styleFrom(
                     primary: primaryColor, // Change to your desired color

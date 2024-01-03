@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
 import 'package:slicing_design_apotech/common/styles.dart';
 import 'package:slicing_design_apotech/ui/register-screen/register_screen.dart';
+import 'package:slicing_design_apotech/ui/verify-otp/verify_otp.dart';
 import 'package:slicing_design_apotech/ui/welcome-screen/welcome_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -127,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(height: 32),
             ElevatedButton(
               onPressed: () {
-                //Navigation.replaceNamed(routeName: HomeScreen.routeName);
+                Navigation.replaceNamed(routeName: VerifyScreen.routeName);
               },
               style: ElevatedButton.styleFrom(
                 primary: primaryColor, // Change to your desired color
