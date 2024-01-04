@@ -203,6 +203,12 @@ class _HomeScreenState extends State<HomeScreen> {
               child: detailDeals(),
             ),
           ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20, left: 24),
+              child: textDeals(),
+            ),
+          ),
         ],
       ),
     );
@@ -210,85 +216,147 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Positioned detailDeals() {
     return Positioned(
-      child: Row(
-        children: [
-          Container(
-            width: 180.0,
-            height: 250.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              color: whiteColor,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5), // Warna bayangan
-                  blurRadius: 3.0, // Blur radius
-                  spreadRadius: 1.0, // Spread radius
-                  offset: Offset(0, 8), // Offset (x, y)
-                ),
-              ],
-            ),
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                Container(
-                  width: 180.0,
-                  height: 154.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.grey.withOpacity(0.20),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            Container(
+              width: 180.0,
+              height: 250.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: whiteColor,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    blurRadius: 3.0,
+                    spreadRadius: 1.0,
+                    offset: Offset(0, 8),
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 20),
-                  child: Image.asset(
-                    'assets/images/obat-1.png',
-                    width: 120.0,
-                    height: 120.0,
+                ],
+              ),
+              child: Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  Container(
+                    width: 180.0,
+                    height: 154.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Colors.grey.withOpacity(0.20),
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(width: 16.0),
-          Container(
-            width: 180.0,
-            height: 250.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              color: whiteColor,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5), // Warna bayangan
-                  blurRadius: 3.0, // Blur radius
-                  spreadRadius: 1.0, // Spread radius
-                  offset: Offset(0, 8), // Offset (x, y)
-                ),
-              ],
-            ),
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                Container(
-                  width: 180.0,
-                  height: 154.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.grey.withOpacity(0.20),
+                  Container(
+                    margin: EdgeInsets.only(top: 20),
+                    child: Image.asset(
+                      'assets/images/obat-1.png',
+                      width: 120.0,
+                      height: 120.0,
+                    ),
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 20),
-                  child: Image.asset(
-                    'assets/images/obat-2.png',
-                    width: 120.0,
-                    height: 120.0,
+                  Container(
+                    margin: EdgeInsets.only(top: 170, left: 16, right: 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Accu-check Active Test Strip',
+                          style: GoogleFonts.overpass(
+                            fontSize: 13,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Rp 112.000',
+                          style: GoogleFonts.overpass(
+                            fontSize: 13,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  Positioned(
+                    top: 210,
+                    right: 0,
+                    child: Container(
+                      width: 48,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: ratingColor,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: whiteColor,
+                            size: 13,
+                          ),
+                          SizedBox(width: 4),
+                          Text(
+                            '4.2',
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: whiteColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ), // Tambahkan spasi antara dua kotak
-          // Tambahkan kotak atau elemen lain jika diperlukan
-        ],
+
+            SizedBox(width: 16.0),
+            Container(
+              width: 180.0,
+              height: 250.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                color: whiteColor,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    blurRadius: 3.0,
+                    spreadRadius: 1.0,
+                    offset: Offset(0, 8),
+                  ),
+                ],
+              ),
+              child: Stack(
+                alignment: Alignment.topCenter,
+                children: [
+                  Container(
+                    width: 180.0,
+                    height: 154.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Colors.grey.withOpacity(0.20),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 20),
+                    child: Image.asset(
+                      'assets/images/obat-2.png',
+                      width: 120.0,
+                      height: 120.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // Add more containers or elements as needed
+          ],
+        ),
       ),
     );
   }
@@ -354,9 +422,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   BoxShadow(
                     color:
                         primaryColor.withOpacity(0.20), // Set your shadow color
-                    spreadRadius: 0,
-                    blurRadius: 5,
-                    offset: Offset(0, 1), // changes position of shadow
+                    spreadRadius: 2,
+                    blurRadius: 3,
+                    offset: Offset(0, 2), // changes position of shadow
                   ),
                 ],
               ),
