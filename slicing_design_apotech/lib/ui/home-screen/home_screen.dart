@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
 import 'package:slicing_design_apotech/common/styles.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home-screen';
@@ -65,32 +66,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Container(
                                   width: 70,
                                   height: 70,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(2.0),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            'assets/images/profile-fix.png',
-                                          ),
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
+                                  padding: const EdgeInsets.all(2.0),
+                                  child: Image.asset(
+                                    'assets/images/profile-fix.png', // Replace with the path to your raster image
+                                    width: 70,
+                                    height: 70,
                                   ),
                                 ),
                                 SizedBox(width: 10),
                                 Row(
                                   children: [
-                                    Image.asset(
-                                      'assets/images/notification.png',
+                                    SvgPicture.asset(
+                                      'assets/images/top-basket.svg',
                                       width: 24,
                                       height: 24,
                                     ),
                                     SizedBox(width: 20),
-                                    Image.asset(
-                                      'assets/images/basket.png',
+                                    SvgPicture.asset(
+                                      'assets/images/top-notification.svg',
                                       width: 24,
                                       height: 24,
                                     ),
@@ -205,10 +198,98 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.only(top: 20, left: 24),
-              child: textDeals(),
+              padding: const EdgeInsets.only(top: 40, left: 24),
+              child: textFeatured(),
             ),
           ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20, left: 24),
+              child: detailCompany(),
+            ),
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/images/home.svg'),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/images/notification.svg'),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: buildPlusIcon(),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/images/basket.svg'),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/images/profile.svg'),
+            label: '',
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildPlusIcon() {
+    return Container(
+      width: 40,
+      height: 40,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(6),
+        color: primaryColor, // Change color as needed
+      ),
+      child: Center(
+        child: SvgPicture.asset(
+          'assets/images/plus.svg',
+          width: 24, // Adjust size as needed
+          height: 24,
+        ),
+      ),
+    );
+  }
+
+  Positioned detailCompany() {
+    return Positioned(
+      // Sesuaikan dengan posisi yang diinginkan
+      top: 0,
+      left: 0,
+      right: 0,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: [
+            imageWithLabel('assets/images/1.png', 'Himalaya Wellness',
+                spacing: 1.0),
+            imageWithLabel('assets/images/2.png', 'Accu-Chek', spacing: 1.0),
+            imageWithLabel('assets/images/3.png', 'Vlcc', spacing: 1.0),
+            imageWithLabel('assets/images/4.png', 'Protinex', spacing: 1.0),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget imageWithLabel(String imagePath, String label,
+      {double spacing = 8.0}) {
+    return Padding(
+      padding: EdgeInsets.all(spacing),
+      child: Column(
+        children: [
+          Image.asset(
+            imagePath,
+            width: 100, // Sesuaikan ukuran gambar sesuai kebutuhan
+            height: 100,
+          ),
+          SizedBox(height: spacing),
+          Text(label),
         ],
       ),
     );
@@ -351,6 +432,64 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 120.0,
                     ),
                   ),
+                  Container(
+                    margin: EdgeInsets.only(top: 170, left: 16, right: 16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Omron HEM-8712 BP Monitor',
+                          style: GoogleFonts.overpass(
+                            fontSize: 13,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          'Rp 150.000',
+                          style: GoogleFonts.overpass(
+                            fontSize: 13,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    top: 210,
+                    right: 0,
+                    child: Container(
+                      width: 48,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: ratingColor,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: whiteColor,
+                            size: 13,
+                          ),
+                          SizedBox(width: 4),
+                          Text(
+                            '4.2',
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: whiteColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -363,8 +502,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Positioned textDeals() {
     return Positioned(
-      top: 650.0, // Adjust as needed for vertical placement
-      left: 16.0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -382,6 +519,24 @@ class _HomeScreenState extends State<HomeScreen> {
               fontSize: 16,
               fontWeight: FontWeight.w400,
               color: primaryColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Positioned textFeatured() {
+    return Positioned(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Featured Brands",
+            style: GoogleFonts.overpass(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: borderColor,
             ),
           ),
         ],
