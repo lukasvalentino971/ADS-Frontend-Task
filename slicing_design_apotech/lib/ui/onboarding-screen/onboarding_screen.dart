@@ -127,7 +127,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
           done: Text(
-            "Next",
+            "Mulai",
             style: GoogleFonts.poppins(
               fontSize: 14,
               color: primaryColor,
