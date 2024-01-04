@@ -16,150 +16,108 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          CustomScrollView(
-            slivers: [
-              SliverAppBar(
-                expandedHeight: 215.0,
-                floating: false,
-                pinned: true,
-                flexibleSpace: FlexibleSpaceBar(
-                  background: ClipRRect(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(30),
-                      bottomRight: Radius.circular(30),
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+            ),
+          ),
+          SliverAppBar(
+            expandedHeight: 215.0,
+            floating: false,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              background: ClipRRect(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30),
+                ),
+                child: Stack(
+                  children: [
+                    Container(
+                      color: primaryColor,
                     ),
-                    child: Stack(
-                      children: [
-                        Container(
-                          color: primaryColor,
+                    Positioned(
+                      top: 80,
+                      right: 180,
+                      child: Container(
+                        width: 412,
+                        height: 412,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white.withOpacity(0.3),
                         ),
-                        // Add the circle here
-                        Positioned(
-                          top: 80,
-                          right: 180,
-                          child: Container(
-                            width: 412,
-                            height: 412,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white.withOpacity(0.3),
-                            ),
-                          ),
-                        ),
-                        // Add avatar, basket icon, and notification icon
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 50, horizontal: 24),
-                          child: Positioned(
-                            top: 20,
-                            left: 20,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 50, horizontal: 24),
+                      child: Positioned(
+                        top: 20,
+                        left: 20,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      width: 70,
-                                      height: 70,
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(2.0),
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            image: DecorationImage(
-                                              image: AssetImage(
-                                                'assets/images/profile-fix.png',
-                                              ),
-                                              fit: BoxFit.cover,
-                                            ),
+                                Container(
+                                  width: 70,
+                                  height: 70,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(2.0),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                          image: AssetImage(
+                                            'assets/images/profile-fix.png',
                                           ),
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
                                     ),
-                                    SizedBox(width: 10),
-                                    Row(
-                                      children: [
-                                        Image.asset(
-                                          'assets/images/notification.png',
-                                          width: 24,
-                                          height: 24,
-                                        ),
-                                        SizedBox(width: 20),
-                                        Image.asset(
-                                          'assets/images/basket.png',
-                                          width: 24,
-                                          height: 24,
-                                        ),
-                                      ],
+                                  ),
+                                ),
+                                SizedBox(width: 10),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/notification.png',
+                                      width: 24,
+                                      height: 24,
+                                    ),
+                                    SizedBox(width: 20),
+                                    Image.asset(
+                                      'assets/images/basket.png',
+                                      width: 24,
+                                      height: 24,
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 10),
-                                Text(
-                                  "Hi, Lorem",
-                                  style: GoogleFonts.overpass(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
-                                    color: whiteColor,
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  "Welcome to Apotech",
-                                  style: GoogleFonts.overpass(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w400,
-                                    color: whiteColor,
-                                  ),
-                                ),
                               ],
                             ),
-                          ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Hi, Lorem",
+                              style: GoogleFonts.overpass(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                                color: whiteColor,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Welcome to Apotech",
+                              style: GoogleFonts.overpass(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: whiteColor,
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              // Add other slivers/content below as needed
-            ],
-          ),
-          Positioned(
-            top: 230.0, // Adjust as needed for vertical placement
-            left: 16.0,
-            right: 16.0,
-            child: SizedBox(
-              height: 50.0,
-              child: ElevatedButton(
-                onPressed: () {
-                  // Handle search button press
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: whiteColor,
-                  onPrimary: Colors.white,
-                  fixedSize: Size(double.maxFinite, 50),
-                  shadowColor: Colors.black
-                      .withOpacity(0.25), // Add shadow with specified color
-                  elevation: 6, // Set elevation for shadow
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16.0), // Adjust padding for icon
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Icon(Icons.search, color: Colors.black.withOpacity(0.30)),
-                    const SizedBox(
-                        width: 20), // Add spacing between icon and text
-                    Text(
-                      'Search Medicine & Healthcare products',
-                      style: GoogleFonts.overpass(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w700,
-                        color: borderColor.withOpacity(0.30),
                       ),
                     ),
                   ],
@@ -167,8 +125,337 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 24), // Adjust the top padding as needed
+              child: SizedBox(
+                height: 50.0,
+                child: GestureDetector(
+                  onTap: () {
+                    // Handle search button press
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: whiteColor,
+                      borderRadius: BorderRadius.circular(56),
+                      boxShadow: [
+                        BoxShadow(
+                          color: primaryColor.withOpacity(0.25),
+                          spreadRadius: 2,
+                          blurRadius: 5,
+                          offset: Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(Icons.search,
+                              color: Colors.black.withOpacity(0.30)),
+                          const SizedBox(width: 20),
+                          Text(
+                            'Search Medicine & Healthcare products',
+                            style: GoogleFonts.overpass(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700,
+                              color: borderColor.withOpacity(0.30),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 24),
+              child: topCategories(),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 5, left: 24),
+              child: detailCategories(),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 24),
+              child: bannerApotech(context),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+              child: textDeals(),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20, left: 24),
+              child: detailDeals(),
+            ),
+          ),
         ],
       ),
     );
   }
+
+  Positioned detailDeals() {
+    return Positioned(
+      child: Row(
+        children: [
+          Container(
+            width: 180.0,
+            height: 250.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              color: whiteColor,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5), // Warna bayangan
+                  blurRadius: 3.0, // Blur radius
+                  spreadRadius: 1.0, // Spread radius
+                  offset: Offset(0, 8), // Offset (x, y)
+                ),
+              ],
+            ),
+            child: Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Container(
+                  width: 180.0,
+                  height: 154.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.grey.withOpacity(0.20),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 20),
+                  child: Image.asset(
+                    'assets/images/obat-1.png',
+                    width: 120.0,
+                    height: 120.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(width: 16.0),
+          Container(
+            width: 180.0,
+            height: 250.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              color: whiteColor,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5), // Warna bayangan
+                  blurRadius: 3.0, // Blur radius
+                  spreadRadius: 1.0, // Spread radius
+                  offset: Offset(0, 8), // Offset (x, y)
+                ),
+              ],
+            ),
+            child: Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Container(
+                  width: 180.0,
+                  height: 154.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.grey.withOpacity(0.20),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 20),
+                  child: Image.asset(
+                    'assets/images/obat-2.png',
+                    width: 120.0,
+                    height: 120.0,
+                  ),
+                ),
+              ],
+            ),
+          ), // Tambahkan spasi antara dua kotak
+          // Tambahkan kotak atau elemen lain jika diperlukan
+        ],
+      ),
+    );
+  }
+
+  Positioned textDeals() {
+    return Positioned(
+      top: 650.0, // Adjust as needed for vertical placement
+      left: 16.0,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Deals of The Day",
+            style: GoogleFonts.overpass(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: borderColor,
+            ),
+          ),
+          Text(
+            "More",
+            style: GoogleFonts.overpass(
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+              color: primaryColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Positioned bannerApotech(BuildContext context) {
+    return Positioned(
+      top: 470.0, // Adjust as needed for vertical placement
+      left: 16.0,
+      child: Image.asset(
+        'assets/images/banner.png',
+        width: MediaQuery.of(context).size.width - 32,
+        // Set the width of the banner to be the full width of the screen
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
+  Positioned detailCategories() {
+    return Positioned(
+      top: 350.0, // Adjust as needed for vertical placement
+      left: 16.0,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          children: List.generate(
+            5,
+            (index) => Container(
+              width: 64,
+              height: 98,
+              margin: EdgeInsets.only(right: 16.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(70),
+                color: whiteColor, // Set your desired color
+                boxShadow: [
+                  BoxShadow(
+                    color:
+                        primaryColor.withOpacity(0.20), // Set your shadow color
+                    spreadRadius: 0,
+                    blurRadius: 5,
+                    offset: Offset(0, 1), // changes position of shadow
+                  ),
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    index == 0
+                        ? 'assets/images/dental.png'
+                        : index == 1
+                            ? 'assets/images/wellness.png'
+                            : index == 2
+                                ? 'assets/images/homeo.png'
+                                : index == 3
+                                    ? 'assets/images/eyecare.png'
+                                    : 'assets/images/skin.png',
+                    width: 40,
+                    height: 40,
+                    // Adjust width and height based on your image size preference
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    index == 0
+                        ? 'Dental'
+                        : index == 1
+                            ? 'Wellness'
+                            : index == 2
+                                ? 'Homeo'
+                                : index == 3
+                                    ? 'Eye Care'
+                                    : 'Skin & Hair',
+                    style: GoogleFonts.overpass(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Positioned topCategories() {
+    return Positioned(
+      top: 310.0, // Adjust as needed for vertical placement
+      left: 16.0,
+      child: Text(
+        "Top Categories",
+        style: GoogleFonts.overpass(
+          fontSize: 16,
+          fontWeight: FontWeight.w700,
+          color: borderColor,
+        ),
+      ),
+    );
+  }
+
+  // Positioned searchButton() {
+  //   return Positioned(
+  //     top: 100.0, // Adjust as needed for vertical placement
+  //     left: 16.0,
+  //     right: 16.0,
+  //     child: SizedBox(
+  //       height: 50.0,
+  //       child: ElevatedButton(
+  //         onPressed: () {
+  //           // Handle search button press
+  //         },
+  //         style: ElevatedButton.styleFrom(
+  //           primary: whiteColor,
+  //           onPrimary: Colors.white,
+  //           fixedSize: Size(double.maxFinite, 50),
+  //           shadowColor: primaryColor
+  //               .withOpacity(0.25), // Add shadow with specified color
+  //           elevation: 5, // Set elevation for shadow
+  //           padding: const EdgeInsets.symmetric(
+  //               horizontal: 16.0), // Adjust padding for icon
+  //         ),
+  //         child: Row(
+  //           mainAxisAlignment: MainAxisAlignment.start,
+  //           children: [
+  //             Icon(Icons.search, color: Colors.black.withOpacity(0.30)),
+  //             const SizedBox(width: 20), // Add spacing between icon and text
+  //             Text(
+  //               'Search Medicine & Healthcare products',
+  //               style: GoogleFonts.overpass(
+  //                 fontSize: 13,
+  //                 fontWeight: FontWeight.w700,
+  //                 color: borderColor.withOpacity(0.30),
+  //               ),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
 }
