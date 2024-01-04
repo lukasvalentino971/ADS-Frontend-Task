@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:slicing_design_apotech/common/navigation.dart';
+
 import 'package:slicing_design_apotech/common/styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:slicing_design_apotech/ui/category-listing/category_listing.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home-screen';
@@ -187,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
-              child: textDeals(),
+              child: textDeals(context),
             ),
           ),
           SliverToBoxAdapter(
@@ -500,7 +501,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Positioned textDeals() {
+  Positioned textDeals(BuildContext context) {
     return Positioned(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -510,15 +511,21 @@ class _HomeScreenState extends State<HomeScreen> {
             style: GoogleFonts.overpass(
               fontSize: 16,
               fontWeight: FontWeight.w700,
-              color: borderColor,
+              color: Colors.black, // Sesuaikan warna dengan kebutuhan Anda
             ),
           ),
-          Text(
-            "More",
-            style: GoogleFonts.overpass(
-              fontSize: 16,
-              fontWeight: FontWeight.w400,
-              color: primaryColor,
+          GestureDetector(
+            onTap: () {
+              // Navigasi ke CategoryListingScreen.routename saat "More" diklik
+              Navigator.pushNamed(context, CategoryListingScreen.routeName);
+            },
+            child: Text(
+              "More",
+              style: GoogleFonts.overpass(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: primaryColor, // Sesuaikan warna dengan kebutuhan Anda
+              ),
             ),
           ),
         ],
