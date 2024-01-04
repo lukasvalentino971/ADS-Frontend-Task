@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
+import 'package:slicing_design_apotech/ui/home-screen/home_screen.dart';
 import 'package:slicing_design_apotech/ui/login-screen/login_screen.dart';
 import 'package:slicing_design_apotech/ui/login-success/login_success.dart';
 import 'package:slicing_design_apotech/ui/register-screen/register_screen.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         RegisterScreen.routeName: (context) => RegisterScreen(),
         VerifyScreen.routeName: (context) => VerifyScreen(),
         LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
+        HomeScreen.routeName: (context) => HomeScreen(),
       },
       navigatorKey: navigatorKey,
     );

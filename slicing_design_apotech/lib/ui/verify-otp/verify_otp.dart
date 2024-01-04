@@ -93,10 +93,6 @@ class _VerifyScreenState extends State<VerifyScreen> {
                   fixedSize: Size(double.maxFinite, 50),
                   shadowColor: primaryColor, // Set shadow color to primaryColor
                   elevation: 5, // Adjust the elevation (blur) of the shadow
-                  // shape: RoundedRectangleBorder(
-                  //   borderRadius: BorderRadius.circular(
-                  //       8), // Adjust the border radius if needed
-                  // ),
                 ),
                 child: Text(
                   'SUBMIT CODE',

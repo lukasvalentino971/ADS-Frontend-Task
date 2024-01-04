@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
 import 'package:slicing_design_apotech/common/styles.dart';
+import 'package:slicing_design_apotech/ui/home-screen/home_screen.dart';
 import 'package:slicing_design_apotech/ui/login-screen/login_screen.dart';
 import 'package:slicing_design_apotech/ui/welcome-screen/welcome_screen.dart';
 
@@ -51,7 +52,7 @@ class _LoginSuccessScreenState extends State<LoginSuccessScreen> {
             Spacer(),
             ElevatedButton(
               onPressed: () {
-                Navigation.replaceNamed(routeName: WelcomeScreen.routeName);
+                Navigation.replaceNamed(routeName: HomeScreen.routeName);
               },
               style: ElevatedButton.styleFrom(
                 primary: primaryColor, // Change to your desired color
