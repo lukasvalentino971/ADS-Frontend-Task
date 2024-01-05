@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:slicing_design_apotech/common/styles.dart';
+import 'package:slicing_design_apotech/common/navigation.dart';
+import 'package:slicing_design_apotech/ui/cart-screen/cart_screen.dart';
+import 'package:slicing_design_apotech/ui/cart-screen/cart_screen.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
   static const String routeName = '/productdetails-screen';
@@ -788,7 +791,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    //Navigation.replaceNamed(routeName: VerifyScreen.routeName);
+                    Navigation.replaceNamed(routeName: CartScreen.routeName);
                   },
                   style: ElevatedButton.styleFrom(
                     primary: primaryColor, // Change to your desired color

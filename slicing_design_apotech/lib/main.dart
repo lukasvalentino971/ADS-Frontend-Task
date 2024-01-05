@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
+import 'package:slicing_design_apotech/ui/cart-screen/cart_screen.dart';
 import 'package:slicing_design_apotech/ui/category-listing/category_listing.dart';
 import 'package:slicing_design_apotech/ui/home-screen/home_screen.dart';
 import 'package:slicing_design_apotech/ui/login-screen/login_screen.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (context) => HomeScreen(),
         CategoryListingScreen.routeName: (context) => CategoryListingScreen(),
         ProductDetailsScreen.routeName: (context) => ProductDetailsScreen(),
+        CartScreen.routeName: (context) => CartScreen(),
       },
       navigatorKey: navigatorKey,
     );
