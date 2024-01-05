@@ -15,3 +15,6 @@ const backgroundPicture = Color(0xFFEEEEF0);
 const ratingColor = Color(0xFFFFC000);
 const labelColor = Color(0xFF090F47);
 const packageColor = Color(0xFFFFA41B);
+const backgroundButtonColor = Color(0xFFF2F4FF);
+const backgroundMinus = Color(0xFFDFE3FF);
+const backgroundPlus = Color(0xFFA0ABFF);

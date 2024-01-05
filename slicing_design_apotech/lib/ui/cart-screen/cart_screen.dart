@@ -38,35 +38,306 @@ class _CartScreenState extends State<CartScreen> {
         ),
       ),
       body: ListView.builder(
+        itemCount: 1,
         itemBuilder: (BuildContext context, int index) {
-          // Add a condition to check the index and display text accordingly
-          if (index == 0) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
-              child: Row(
-                children: [
-                  Text(
-                    "2 Items in your cart",
-                    style: GoogleFonts.overpass(
-                      textStyle: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: borderColor.withOpacity(0.45)),
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "2 Items in your cart",
+                      style: GoogleFonts.overpass(
+                        textStyle: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: borderColor.withOpacity(0.45)),
+                      ),
                     ),
-                  ),
-                  SvgPicture.asset(
-                    'assets/images/plus-blue.svg',
-                    width: 24,
-                    height: 24,
-                    color: primaryColor,
-                  ),
-                ],
-              ),
-            );
-          }
-          // You can continue with other widgets or items in your list
-          // For example, return your product details widget for other indices.
-          // Replace with your actual product details widget
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/plus-blue.svg',
+                          width: 24,
+                          height: 24,
+                          color: primaryColor,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "Add More",
+                          style: GoogleFonts.overpass(
+                            textStyle: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                                color: primaryColor),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    ClipRect(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            8.0), // You can adjust the border radius as needed
+                        child: Image.asset(
+                          'assets/images/botol-1.png',
+                          width: 70,
+                          height: 80,
+                          fit: BoxFit
+                              .cover, // Adjust the BoxFit based on your needs
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Align(
+                          alignment: Alignment.topCenter,
+                          child: Text(
+                            "Sugar Free Gold",
+                            style: GoogleFonts.overpass(
+                              textStyle: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                  color: borderColor),
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "bottle of 500 pellets",
+                          style: GoogleFonts.overpass(
+                            textStyle: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                                color: borderColor.withOpacity(0.45)),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "Rp 25.000",
+                          style: GoogleFonts.overpass(
+                            textStyle: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: borderColor),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 24,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/close.svg',
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          width: 95,
+                          height: 32,
+                          decoration: BoxDecoration(
+                            color: backgroundButtonColor,
+                            borderRadius: BorderRadius.circular(60),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              // Pink circle with minus icon
+                              Container(
+                                width: 32,
+                                height: 32,
+                                decoration: BoxDecoration(
+                                  color: backgroundMinus,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    'assets/images/tanda-minus.svg',
+                                    width: 16,
+                                    height: 16,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              // Pink circle with plus icon
+                              Container(
+                                width: 32,
+                                height: 32,
+                                decoration: BoxDecoration(
+                                  color: backgroundPlus,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    'assets/images/tanda-plus.svg',
+                                    width: 16,
+                                    height: 16,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    // lengkapi kode disini
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 8),
+                  height: 1,
+                  color: borderColor.withOpacity(0.10),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    ClipRect(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                            8.0), // You can adjust the border radius as needed
+                        child: Image.asset(
+                          'assets/images/botol-2.png',
+                          width: 70,
+                          height: 80,
+                          fit: BoxFit
+                              .cover, // Adjust the BoxFit based on your needs
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Align(
+                          alignment: Alignment.topCenter,
+                          child: Text(
+                            "Sugar Free Gold",
+                            style: GoogleFonts.overpass(
+                              textStyle: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                  color: borderColor),
+                            ),
+                          ),
+                        ),
+                        Text(
+                          "bottle of 500 pellets",
+                          style: GoogleFonts.overpass(
+                            textStyle: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                                color: borderColor.withOpacity(0.45)),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "Rp 25.000",
+                          style: GoogleFonts.overpass(
+                            textStyle: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: borderColor),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 24,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/close.svg',
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          width: 95,
+                          height: 32,
+                          decoration: BoxDecoration(
+                            color: backgroundButtonColor,
+                            borderRadius: BorderRadius.circular(60),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              // Pink circle with minus icon
+                              Container(
+                                width: 32,
+                                height: 32,
+                                decoration: BoxDecoration(
+                                  color: backgroundMinus,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    'assets/images/tanda-minus.svg',
+                                    width: 16,
+                                    height: 16,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              // Pink circle with plus icon
+                              Container(
+                                width: 32,
+                                height: 32,
+                                decoration: BoxDecoration(
+                                  color: backgroundPlus,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: SvgPicture.asset(
+                                    'assets/images/tanda-plus.svg',
+                                    width: 16,
+                                    height: 16,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    // lengkapi kode disini
+                  ],
+                ),
+              ],
+            ),
+          );
         },
       ),
     );
