@@ -369,7 +369,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         ],
                       ),
                       SizedBox(
-                        width: 30,
+                        width: 20,
                       ),
                       Row(
                         children: [
@@ -402,6 +402,42 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     width: 13,
                                     height: 13,
                                   ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    width: 123.0,
+                                    height: 3.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      color: borderColor.withOpacity(0.10),
+                                    ),
+                                    child: Stack(
+                                      alignment: Alignment.topLeft,
+                                      children: [
+                                        Container(
+                                          width: 90.0,
+                                          height: 3.0,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10.0),
+                                            color: primaryColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    '67 %',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
+                                  ),
                                 ],
                               ),
                               Row(
@@ -421,6 +457,42 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     'assets/images/little-star.svg',
                                     width: 13,
                                     height: 13,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    width: 123.0,
+                                    height: 3.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      color: borderColor.withOpacity(0.10),
+                                    ),
+                                    child: Stack(
+                                      alignment: Alignment.topLeft,
+                                      children: [
+                                        Container(
+                                          width: 28.0,
+                                          height: 3.0,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10.0),
+                                            color: primaryColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    '20 %',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -442,6 +514,32 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     width: 13,
                                     height: 13,
                                   ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    width: 123.0,
+                                    height: 3.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      color: borderColor.withOpacity(0.10),
+                                    ),
+                                    child: Stack(
+                                      alignment: Alignment.topLeft,
+                                      children: [],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    '7 %',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
+                                  ),
                                 ],
                               ),
                               Row(
@@ -461,6 +559,32 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     'assets/images/little-star.svg',
                                     width: 13,
                                     height: 13,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    width: 123.0,
+                                    height: 3.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      color: borderColor.withOpacity(0.10),
+                                    ),
+                                    child: Stack(
+                                      alignment: Alignment.topLeft,
+                                      children: [],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    '0 %',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -482,6 +606,42 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                     width: 13,
                                     height: 13,
                                   ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    width: 123.0,
+                                    height: 3.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                      color: borderColor.withOpacity(0.10),
+                                    ),
+                                    child: Stack(
+                                      alignment: Alignment.topLeft,
+                                      children: [
+                                        Container(
+                                          width: 17.0,
+                                          height: 3.0,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10.0),
+                                            color: primaryColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    '20 %',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ],
@@ -490,8 +650,169 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       ),
                     ],
                   ),
-                )
-
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Lorem Hoffman',
+                          style: GoogleFonts.overpass(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: borderColor,
+                          ),
+                        ),
+                        Text(
+                          '05- oct 2023',
+                          style: GoogleFonts.overpass(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: borderColor.withOpacity(0.45),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Row(
+                  children: [
+                    SvgPicture.asset(
+                      'assets/images/little-star.svg',
+                      width: 13,
+                      height: 13,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '4.2',
+                      style: GoogleFonts.overpass(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: borderColor.withOpacity(0.45),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  'Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ut nisi odio. Nulla facilisi.Nunc risus massa, gravida id egestas a, pretium vel tellus. Praesent feugiat diam sit amet pulvinar finibus. Etiam et nisi aliquet, accumsan nisi sit.',
+                  style: GoogleFonts.overpass(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: borderColor.withOpacity(0.20),
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 8),
+                  height: 1,
+                  color: borderColor.withOpacity(0.10),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Ben Ipsum',
+                          style: GoogleFonts.overpass(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: borderColor,
+                          ),
+                        ),
+                        Text(
+                          '09- oct 2023',
+                          style: GoogleFonts.overpass(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: borderColor.withOpacity(0.45),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Row(
+                  children: [
+                    SvgPicture.asset(
+                      'assets/images/little-star.svg',
+                      width: 13,
+                      height: 13,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '4.2',
+                      style: GoogleFonts.overpass(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: borderColor.withOpacity(0.45),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  'Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ut nisi odio. Nulla facilisi.Nunc risus massa, gravida id egestas a, pretium vel tellus. Praesent feugiat diam sit amet pulvinar finibus. Etiam et nisi aliquet, accumsan nisi sit.',
+                  style: GoogleFonts.overpass(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: borderColor.withOpacity(0.20),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    //Navigation.replaceNamed(routeName: VerifyScreen.routeName);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: primaryColor, // Change to your desired color
+                    onPrimary: Colors.white, // Change to your desired color
+                    fixedSize: Size(double.maxFinite, 50),
+                    shadowColor:
+                        primaryColor, // Set shadow color to primaryColor
+                    elevation: 5, // Adjust the elevation (blur) of the shadow
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(
+                    //       8), // Adjust the border radius if needed
+                    // ),
+                  ),
+                  child: Text(
+                    'GO TO CHART',
+                    style: GoogleFonts.overpass(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
                 // Tambahkan widget lain sesuai kebutuhan di sini
               ],
             ),
