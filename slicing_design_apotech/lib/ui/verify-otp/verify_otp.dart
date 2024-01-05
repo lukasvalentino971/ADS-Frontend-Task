@@ -28,7 +28,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               // Tambahkan fungsi untuk kembali ke RegisterScreen
-              Navigation.replaceNamed(routeName: RegisterScreen.routeName);
+              Navigator.pop(context);
             },
           ),
         ),

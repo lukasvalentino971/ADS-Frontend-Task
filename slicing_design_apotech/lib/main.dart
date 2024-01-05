@@ -6,7 +6,9 @@ import 'package:slicing_design_apotech/ui/checkout-screen/checkout_screen.dart';
 import 'package:slicing_design_apotech/ui/home-screen/home_screen.dart';
 import 'package:slicing_design_apotech/ui/login-screen/login_screen.dart';
 import 'package:slicing_design_apotech/ui/login-success/login_success.dart';
+import 'package:slicing_design_apotech/ui/notification-screen/notification_screen.dart';
 import 'package:slicing_design_apotech/ui/product-detail/product_details.dart';
+import 'package:slicing_design_apotech/ui/profile-screen/profile_screen.dart';
 import 'package:slicing_design_apotech/ui/register-screen/register_screen.dart';
 import 'package:slicing_design_apotech/ui/success-screen/sucess-screen.dart';
 import 'package:slicing_design_apotech/ui/verify-otp/verify_otp.dart';
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      debugShowCheckedModeBanner: false,
       initialRoute: SplashScreen.routeName,
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
@@ -42,6 +45,8 @@ class MyApp extends StatelessWidget {
         CartScreen.routeName: (context) => CartScreen(),
         CheckOutScreen.routeName: (context) => CheckOutScreen(),
         SuccessScreen.routeName: (context) => SuccessScreen(),
+        NotificationScreen.routeName: (context) => NotificationScreen(),
+        ProfileScreen.routeName: (context) => ProfileScreen(),
       },
       navigatorKey: navigatorKey,
     );

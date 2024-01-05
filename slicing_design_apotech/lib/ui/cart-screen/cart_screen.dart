@@ -26,7 +26,9 @@ class _CartScreenState extends State<CartScreen> {
           padding: EdgeInsets.only(left: 12),
           child: IconButton(
             icon: Icon(Icons.arrow_back),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
         ),
         title: Text(
@@ -182,6 +184,15 @@ class _CartScreenState extends State<CartScreen> {
                                 ),
                               ),
                               // Pink circle with plus icon
+                              Text(
+                                "1",
+                                style: GoogleFonts.overpass(
+                                  textStyle: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor),
+                                ),
+                              ),
                               Container(
                                 width: 32,
                                 height: 32,
@@ -310,6 +321,15 @@ class _CartScreenState extends State<CartScreen> {
                                     height: 16,
                                     color: Colors.white,
                                   ),
+                                ),
+                              ),
+                              Text(
+                                "1",
+                                style: GoogleFonts.overpass(
+                                  textStyle: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor),
                                 ),
                               ),
                               // Pink circle with plus icon

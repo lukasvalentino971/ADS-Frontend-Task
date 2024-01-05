@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:slicing_design_apotech/common/styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:slicing_design_apotech/ui/cart-screen/cart_screen.dart';
 import 'package:slicing_design_apotech/ui/category-listing/category_listing.dart';
+import 'package:slicing_design_apotech/ui/notification-screen/notification_screen.dart';
+import 'package:slicing_design_apotech/ui/profile-screen/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home-screen';
@@ -15,6 +17,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,17 +81,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                 SizedBox(width: 10),
                                 Row(
                                   children: [
-                                    SvgPicture.asset(
-                                      'assets/images/top-basket.svg',
-                                      width: 24,
-                                      height: 24,
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.pushNamed(
+                                            context, CartScreen.routeName);
+                                      },
+                                      child: SvgPicture.asset(
+                                        'assets/images/top-basket.svg',
+                                        width: 24,
+                                        height: 24,
+                                      ),
                                     ),
                                     SizedBox(width: 20),
                                     GestureDetector(
                                       onTap: () {
-                                        // Navigate to NotificationScreen
-                                        // Navigator.pushNamed(context,
-                                        //     NotificationScreen.routeName);
+                                        Navigator.pushNamed(context,
+                                            NotificationScreen.routeName);
                                       },
                                       child: SvgPicture.asset(
                                         'assets/images/top-notification.svg',
@@ -220,6 +229,22 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        currentIndex: _currentIndex,
+        onTap: (int index) {
+          setState(() {
+            _currentIndex = index;
+            // Navigate to the corresponding screen based on the tapped icon
+            if (index == 4) {
+              Navigator.pushReplacementNamed(context, ProfileScreen.routeName);
+            } else if (index == 3) {
+              Navigator.pushNamed(context, CartScreen.routeName);
+            } else if (index == 2) {
+              Navigator.pushNamed(context, CategoryListingScreen.routeName);
+            } else if (index == 1) {
+              Navigator.pushNamed(context, NotificationScreen.routeName);
+            }
+          });
+        },
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/images/home.svg'),
@@ -524,7 +549,7 @@ class _HomeScreenState extends State<HomeScreen> {
           GestureDetector(
             onTap: () {
               // Navigasi ke CategoryListingScreen.routename saat "More" diklik
-              Navigator.pushNamed(context, CategoryListingScreen.routeName);
+              // Navigator.pushNamed(context, CategoryListingScreen.routeName);
             },
             child: Text(
               "More",

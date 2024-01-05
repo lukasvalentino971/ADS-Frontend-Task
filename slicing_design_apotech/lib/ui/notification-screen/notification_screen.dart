@@ -6,16 +6,16 @@ import 'package:slicing_design_apotech/ui/home-screen/home_screen.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
 import 'package:slicing_design_apotech/ui/success-screen/sucess-screen.dart';
 
-class CheckOutScreen extends StatefulWidget {
-  static const String routeName = '/checkout-screen';
+class NotificationScreen extends StatefulWidget {
+  static const String routeName = '/notification-screen';
 
-  const CheckOutScreen({Key? key}) : super(key: key);
+  const NotificationScreen({Key? key}) : super(key: key);
 
   @override
-  State<CheckOutScreen> createState() => _CheckOutScreenState();
+  State<NotificationScreen> createState() => _NotificationScreenState();
 }
 
-class _CheckOutScreenState extends State<CheckOutScreen> {
+class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,11 +24,13 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
           padding: EdgeInsets.only(left: 12),
           child: IconButton(
             icon: Icon(Icons.arrow_back),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
         ),
         title: Text(
-          "Checkout",
+          "Notification",
           style: GoogleFonts.overpass(
             textStyle: TextStyle(
               fontSize: 20,
@@ -36,470 +38,345 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
             ),
           ),
         ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              // Implement your clear all logic here
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: Text(
+                "Clear All",
+                style: TextStyle(
+                  color: primaryColor, // Change color as needed
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ],
+        bottom: PreferredSize(
+          child: Divider(
+            color: borderColor.withOpacity(0.10),
+            height: 1,
+          ),
+          preferredSize: Size.fromHeight(1),
+        ),
       ),
       body: ListView.builder(
         itemCount: 1,
         itemBuilder: (BuildContext context, int index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "2 Items in your cart",
-                          style: GoogleFonts.overpass(
-                            textStyle: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                color: borderColor.withOpacity(0.45)),
-                          ),
-                        ),
-                        Text(
-                          "TOTAL",
-                          style: GoogleFonts.overpass(
-                            textStyle: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w400,
-                                color: borderColor.withOpacity(0.45)),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Text(
-                      "Rp 185.000",
-                      style: GoogleFonts.overpass(
-                        textStyle: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: borderColor),
-                      ),
-                    ),
-                  ],
-                ),
-                Text(
-                  "Delivery Address",
-                  style: GoogleFonts.overpass(
-                    textStyle: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: borderColor),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 93,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: borderColor.withOpacity(0.10),
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SvgPicture.asset(
-                          'assets/images/active-button.svg',
-                          width: 24,
-                          height: 24,
-                          color: primaryColor,
+                          'assets/images/not1.svg',
+                          width: 16,
+                          height: 22.4,
+                          color: borderColor.withOpacity(0.45),
                         ),
-                        SizedBox(width: 20),
+                        SizedBox(
+                          width: 12,
+                        ),
                         Expanded(
-                          // Use an Expanded widget to make the text take available space
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 20),
+                          child: Align(
+                            alignment: Alignment.topCenter,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Home",
-                                  style: GoogleFonts.overpass(
+                                  "We know that — for children AND adults — learning is most effective when it is",
+                                  style: GoogleFonts.hankenGrotesk(
                                     textStyle: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontStyle: FontStyle.italic,
                                       color: borderColor,
                                     ),
                                   ),
                                 ),
-                                Text(
-                                  "(205) 555-024",
-                                  style: GoogleFonts.overpass(
-                                    textStyle: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: borderColor.withOpacity(0.10),
-                                    ),
-                                  ),
+                                SizedBox(
+                                  height: 5,
                                 ),
                                 Text(
-                                  "1786 Wheeler Bridge",
+                                  "Aug 12, 2023 at 12:08 PM",
                                   style: GoogleFonts.overpass(
-                                    textStyle: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: borderColor.withOpacity(0.10),
-                                    ),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: borderColor.withOpacity(0.45),
                                   ),
                                 ),
                               ],
                             ),
                           ),
                         ),
-                        SizedBox(width: 20),
-                        SvgPicture.asset(
-                          'assets/images/pen.svg',
-                          width: 12.8,
-                          height: 16,
-                          color: borderColor.withOpacity(0.45),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 93,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: borderColor.withOpacity(0.10),
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SvgPicture.asset(
-                          'assets/images/nonactive-button.svg',
-                          width: 24,
-                          height: 24,
-                          color: primaryColor,
-                        ),
-                        SizedBox(width: 20),
-                        Expanded(
-                          // Use an Expanded widget to make the text take available space
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 20),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Office",
-                                  style: GoogleFonts.overpass(
-                                    textStyle: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: borderColor,
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  "(205) 555-024",
-                                  style: GoogleFonts.overpass(
-                                    textStyle: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: borderColor.withOpacity(0.10),
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  "1786 w Dallas St underfield",
-                                  style: GoogleFonts.overpass(
-                                    textStyle: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      color: borderColor.withOpacity(0.10),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                        Container(
+                          width: 8,
+                          height: 8,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.pink,
                           ),
                         ),
-                        SizedBox(width: 20),
-                        SvgPicture.asset(
-                          'assets/images/pen.svg',
-                          width: 12.8,
-                          height: 16,
-                          color: borderColor.withOpacity(0.45),
-                        ),
                       ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SvgPicture.asset(
-                      'assets/images/plus-blue.svg',
-                      width: 24,
-                      height: 24,
-                      color: primaryColor,
                     ),
                     SizedBox(
-                      width: 10,
+                      height: 20,
                     ),
-                    Text(
-                      "Add Address",
-                      style: GoogleFonts.overpass(
-                        textStyle: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                            color: primaryColor),
-                      ),
+                    Divider(
+                      height: 1,
+                      color: borderColor.withOpacity(0.10),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/not2.svg',
+                          width: 16,
+                          height: 16,
+                          color: borderColor.withOpacity(0.45),
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Expanded(
+                          child: Align(
+                            alignment: Alignment.topCenter,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "The future of professional learning is immersive, communal experiences for ",
+                                  style: GoogleFonts.overpass(
+                                    textStyle: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Aug 12, 2023 at 12:08 PM",
+                                  style: GoogleFonts.overpass(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: borderColor.withOpacity(0.45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 8,
+                          height: 8,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Divider(
+                      height: 1,
+                      color: borderColor.withOpacity(0.10),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/not3.svg',
+                          width: 16,
+                          height: 16,
+                          color: borderColor.withOpacity(0.45),
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Expanded(
+                          child: Align(
+                            alignment: Alignment.topCenter,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "With this in mind, Global Online Academy created the Blended Learning Design ",
+                                  style: GoogleFonts.overpass(
+                                    textStyle: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Aug 12, 2023 at 12:08 PM",
+                                  style: GoogleFonts.overpass(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: borderColor.withOpacity(0.45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 8,
+                          height: 8,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Divider(
+                      height: 1,
+                      color: borderColor.withOpacity(0.10),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/not3.svg',
+                          width: 16,
+                          height: 16,
+                          color: borderColor.withOpacity(0.45),
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Expanded(
+                          child: Align(
+                            alignment: Alignment.topCenter,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Technology should serve, not drive, pedagogy. Schools often discuss ",
+                                  style: GoogleFonts.overpass(
+                                    textStyle: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Aug 12, 2023 at 12:08 PM",
+                                  style: GoogleFonts.overpass(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: borderColor.withOpacity(0.45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 8,
+                          height: 8,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Divider(
+                      height: 1,
+                      color: borderColor.withOpacity(0.10),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/not3.svg',
+                          width: 16,
+                          height: 16,
+                          color: borderColor.withOpacity(0.45),
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Expanded(
+                          child: Align(
+                            alignment: Alignment.topCenter,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Peer learning works. By building robust personal learning communities both  ",
+                                  style: GoogleFonts.overpass(
+                                    textStyle: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Aug 12, 2023 at 12:08 PM",
+                                  style: GoogleFonts.overpass(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: borderColor.withOpacity(0.45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: 8,
+                          height: 8,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
-                ),
-                Text(
-                  "Payment Methods",
-                  style: GoogleFonts.overpass(
-                    textStyle: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.normal,
-                        color: borderColor),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 252,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: borderColor.withOpacity(0.10),
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(6),
-                                border: Border.all(
-                                  color: borderColor.withOpacity(0.10),
-                                  width: 1.0,
-                                ),
-                              ),
-                              child: Image.asset(
-                                'assets/images/credit.png',
-                                width: 24,
-                                height: 24,
-                              ),
-                            ),
-                            SizedBox(width: 16),
-                            Expanded(
-                              child: Text(
-                                "Credit Card",
-                                style: GoogleFonts.overpass(
-                                  textStyle: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    color: borderColor,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Spacer(),
-                            SvgPicture.asset(
-                              'assets/images/active-button.svg',
-                              width: 24,
-                              height: 24,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(6),
-                                border: Border.all(
-                                  color: borderColor.withOpacity(0.10),
-                                  width: 1.0,
-                                ),
-                              ),
-                              child: Image.asset(
-                                'assets/images/paypal.png',
-                                width: 24,
-                                height: 24,
-                              ),
-                            ),
-                            SizedBox(width: 16),
-                            Expanded(
-                              child: Text(
-                                "Paypal",
-                                style: GoogleFonts.overpass(
-                                  textStyle: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    color: borderColor,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Spacer(),
-                            SvgPicture.asset(
-                              'assets/images/nonactive-button.svg',
-                              width: 24,
-                              height: 24,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(6),
-                                border: Border.all(
-                                  color: borderColor.withOpacity(0.10),
-                                  width: 1.0,
-                                ),
-                              ),
-                              child: Image.asset(
-                                'assets/images/google-play.png',
-                                width: 24,
-                                height: 24,
-                              ),
-                            ),
-                            SizedBox(width: 16),
-                            Expanded(
-                              child: Text(
-                                "Google Pay",
-                                style: GoogleFonts.overpass(
-                                  textStyle: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    color: borderColor,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Spacer(),
-                            SvgPicture.asset(
-                              'assets/images/nonactive-button.svg',
-                              width: 24,
-                              height: 24,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(6),
-                                border: Border.all(
-                                  color: borderColor.withOpacity(0.10),
-                                  width: 1.0,
-                                ),
-                              ),
-                              child: Image.asset(
-                                'assets/images/apple.png',
-                                width: 24,
-                                height: 24,
-                              ),
-                            ),
-                            SizedBox(width: 16),
-                            Expanded(
-                              child: Text(
-                                "Apple Pay",
-                                style: GoogleFonts.overpass(
-                                  textStyle: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w600,
-                                    color: borderColor,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Spacer(),
-                            SvgPicture.asset(
-                              'assets/images/nonactive-button.svg',
-                              width: 24,
-                              height: 24,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigation.replaceNamed(routeName: SuccessScreen.routeName);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: primaryColor, // Change to your desired color
-                    onPrimary: Colors.white, // Change to your desired color
-                    fixedSize: Size(double.maxFinite, 50),
-                    shadowColor:
-                        primaryColor, // Set shadow color to primaryColor
-                    elevation: 5, // Adjust the elevation (blur) of the shadow
-                    // shape: RoundedRectangleBorder(
-                    //   borderRadius: BorderRadius.circular(
-                    //       8), // Adjust the border radius if needed
-                    // ),
-                  ),
-                  child: Text(
-                    'Pay Now Rp 185.000',
-                    style: GoogleFonts.overpass(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
                 ),
               ],
             ),

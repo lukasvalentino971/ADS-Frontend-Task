@@ -118,7 +118,7 @@ class _CategoryListingScreenState extends State<CategoryListingScreen> {
 
   Widget _buildImageContainer(String imagePath, String label) {
     return Container(
-      width: 110,
+      width: 100,
       height: 162,
       decoration: BoxDecoration(
         color: backgroundPicture,
@@ -135,7 +135,7 @@ class _CategoryListingScreenState extends State<CategoryListingScreen> {
                   alignment: Alignment.topCenter,
                   child: Image.asset(
                     imagePath,
-                    width: 110,
+                    width: 100,
                     height: 100,
                     fit: BoxFit.cover,
                   ),

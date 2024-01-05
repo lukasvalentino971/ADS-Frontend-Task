@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
             icon: Icon(Icons.arrow_back),
             onPressed: () {
               // Tambahkan fungsi untuk kembali ke WelcomeScreen
-              Navigation.replaceNamed(routeName: WelcomeScreen.routeName);
+              Navigator.pop(context);
             },
           ),
         ),

@@ -20,3 +20,5 @@ const backgroundMinus = Color(0xFFDFE3FF);
 const backgroundPlus = Color(0xFFA0ABFF);
 //27AE60
 const textColorCupon = Color(0xFF27AE60);
+//091C3F
+const textNameColor = Color(0xFF091C3F);
