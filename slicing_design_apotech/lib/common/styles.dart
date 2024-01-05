@@ -18,3 +18,5 @@ const packageColor = Color(0xFFFFA41B);
 const backgroundButtonColor = Color(0xFFF2F4FF);
 const backgroundMinus = Color(0xFFDFE3FF);
 const backgroundPlus = Color(0xFFA0ABFF);
+//27AE60
+const textColorCupon = Color(0xFF27AE60);
