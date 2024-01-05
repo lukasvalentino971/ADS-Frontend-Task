@@ -345,12 +345,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                 width: 26,
                                 height: 26,
                               ),
-                              Container(
-                                width: 1,
-                                height: 90,
-                                color: Colors
-                                    .black, // You can adjust the color as needed
-                              ),
                             ],
                           ),
                           SizedBox(
@@ -371,6 +365,126 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                               fontWeight: FontWeight.w400,
                               color: borderColor.withOpacity(0.45),
                             ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 30,
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            width: 1,
+                            height: 90,
+                            color: borderColor.withOpacity(
+                                0.20), // You can adjust the color as needed
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    '4',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  SvgPicture.asset(
+                                    'assets/images/little-star.svg',
+                                    width: 13,
+                                    height: 13,
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    '4',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  SvgPicture.asset(
+                                    'assets/images/little-star.svg',
+                                    width: 13,
+                                    height: 13,
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    '3',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  SvgPicture.asset(
+                                    'assets/images/little-star.svg',
+                                    width: 13,
+                                    height: 13,
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    '2',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  SvgPicture.asset(
+                                    'assets/images/little-star.svg',
+                                    width: 13,
+                                    height: 13,
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    '1',
+                                    style: GoogleFonts.overpass(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: borderColor.withOpacity(0.45),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  SvgPicture.asset(
+                                    'assets/images/little-star.svg',
+                                    width: 13,
+                                    height: 13,
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ],
                       ),
