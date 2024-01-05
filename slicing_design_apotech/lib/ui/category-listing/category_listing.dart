@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:slicing_design_apotech/common/styles.dart';
+import 'package:slicing_design_apotech/ui/product-detail/product_details.dart';
 
 class CategoryListingScreen extends StatefulWidget {
   static const String routeName = '/categorylisting-screen';
@@ -275,97 +276,107 @@ class _CategoryListingScreenState extends State<CategoryListingScreen> {
                 SizedBox(
                   width: 16,
                 ),
-                Container(
-                  width: 160.0,
-                  height: 250.0,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: whiteColor,
-                    border: Border.all(
-                      color: borderColor.withOpacity(0.10),
-                      width: 1.0,
+                GestureDetector(
+                  onTap: () {
+                    // Fungsi yang dijalankan saat container diklik
+                    Navigator.pushNamed(
+                        context, ProductDetailsScreen.routeName);
+                  },
+                  child: Container(
+                    width: 160.0,
+                    height: 250.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: whiteColor,
+                      border: Border.all(
+                        color: borderColor.withOpacity(0.10),
+                        width: 1.0,
+                      ),
                     ),
-                  ),
-                  child: Stack(
-                    alignment: Alignment.topCenter,
-                    children: [
-                      Container(
-                        width: 180.0,
-                        height: 154.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          color: Colors.grey.withOpacity(0.20),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(top: 20),
-                        child: Image.asset(
-                          'assets/images/omron.png',
-                          width: 120.0,
-                          height: 120.0,
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(top: 170, left: 16, right: 16),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Omron HEM-8712 BP Monitor',
-                              style: GoogleFonts.overpass(
-                                fontSize: 13,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            Text(
-                              'Rp 150.000',
-                              style: GoogleFonts.overpass(
-                                fontSize: 13,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Positioned(
-                        top: 210,
-                        right: 0,
-                        child: Container(
-                          width: 48,
-                          height: 24,
+                    child: Stack(
+                      alignment: Alignment.topCenter,
+                      children: [
+                        // ... Bagian-bagian container yang lain ...
+                        Container(
+                          width: 180.0,
+                          height: 154.0,
                           decoration: BoxDecoration(
-                            color: ratingColor,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20),
-                              bottomLeft: Radius.circular(20),
-                            ),
+                            borderRadius: BorderRadius.circular(10.0),
+                            color: Colors.grey.withOpacity(0.20),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(top: 20),
+                          child: Image.asset(
+                            'assets/images/omron.png',
+                            width: 120.0,
+                            height: 120.0,
+                          ),
+                        ),
+                        Container(
+                          margin:
+                              EdgeInsets.only(top: 170, left: 16, right: 16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Icon(
-                                Icons.star,
-                                color: whiteColor,
-                                size: 13,
-                              ),
-                              SizedBox(width: 4),
                               Text(
-                                '4.2',
-                                style: TextStyle(
+                                'Omron HEM-8712 BP Monitor',
+                                style: GoogleFonts.overpass(
                                   fontSize: 13,
-                                  color: whiteColor,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                'Rp 150.000',
+                                style: GoogleFonts.overpass(
+                                  fontSize: 13,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
                           ),
                         ),
-                      ),
-                    ],
+                        Positioned(
+                          top: 210,
+                          right: 0,
+                          child: Container(
+                            width: 48,
+                            height: 24,
+                            decoration: BoxDecoration(
+                              color: ratingColor,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(20),
+                                bottomLeft: Radius.circular(20),
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.star,
+                                  color: whiteColor,
+                                  size: 13,
+                                ),
+                                SizedBox(width: 4),
+                                Text(
+                                  '4.2',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: whiteColor,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
+
                 // Add more containers or elements as needed
               ],
             ),

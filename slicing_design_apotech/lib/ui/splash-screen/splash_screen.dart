@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:slicing_design_apotech/ui/category-listing/category_listing.dart';
+import 'package:slicing_design_apotech/ui/home-screen/home_screen.dart';
 import '../onboarding-screen/onboarding_screen.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
 
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Timer(Duration(seconds: 3), () {
-      Navigation.replaceNamed(routeName: CategoryListingScreen.routeName);
+      Navigation.replaceNamed(routeName: HomeScreen.routeName);
     });
   }
 

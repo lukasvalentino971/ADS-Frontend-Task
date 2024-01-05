@@ -4,6 +4,7 @@ import 'package:slicing_design_apotech/ui/category-listing/category_listing.dart
 import 'package:slicing_design_apotech/ui/home-screen/home_screen.dart';
 import 'package:slicing_design_apotech/ui/login-screen/login_screen.dart';
 import 'package:slicing_design_apotech/ui/login-success/login_success.dart';
+import 'package:slicing_design_apotech/ui/product-detail/product_details.dart';
 import 'package:slicing_design_apotech/ui/register-screen/register_screen.dart';
 import 'package:slicing_design_apotech/ui/verify-otp/verify_otp.dart';
 import 'package:slicing_design_apotech/ui/welcome-screen/welcome_screen.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         LoginSuccessScreen.routeName: (context) => LoginSuccessScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
         CategoryListingScreen.routeName: (context) => CategoryListingScreen(),
+        ProductDetailsScreen.routeName: (context) => ProductDetailsScreen(),
       },
       navigatorKey: navigatorKey,
     );
