@@ -13,3 +13,5 @@ const dangerColor = Color(0xFFFF5A5A);
 const borderColor = Color(0xFF090F47);
 const backgroundPicture = Color(0xFFEEEEF0);
 const ratingColor = Color(0xFFFFC000);
+const labelColor = Color(0xFF090F47);
+const packageColor = Color(0xFFFFA41B);
