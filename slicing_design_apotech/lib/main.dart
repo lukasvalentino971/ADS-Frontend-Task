@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:slicing_design_apotech/common/navigation.dart';
 import 'package:slicing_design_apotech/ui/cart-screen/cart_screen.dart';
 import 'package:slicing_design_apotech/ui/category-listing/category_listing.dart';
+import 'package:slicing_design_apotech/ui/checkout-screen/checkout_screen.dart';
 import 'package:slicing_design_apotech/ui/home-screen/home_screen.dart';
 import 'package:slicing_design_apotech/ui/login-screen/login_screen.dart';
 import 'package:slicing_design_apotech/ui/login-success/login_success.dart';
 import 'package:slicing_design_apotech/ui/product-detail/product_details.dart';
 import 'package:slicing_design_apotech/ui/register-screen/register_screen.dart';
+import 'package:slicing_design_apotech/ui/success-screen/sucess-screen.dart';
 import 'package:slicing_design_apotech/ui/verify-otp/verify_otp.dart';
 import 'package:slicing_design_apotech/ui/welcome-screen/welcome_screen.dart';
 import './ui/onboarding-screen/onboarding_screen.dart';
@@ -38,6 +40,8 @@ class MyApp extends StatelessWidget {
         CategoryListingScreen.routeName: (context) => CategoryListingScreen(),
         ProductDetailsScreen.routeName: (context) => ProductDetailsScreen(),
         CartScreen.routeName: (context) => CartScreen(),
+        CheckOutScreen.routeName: (context) => CheckOutScreen(),
+        SuccessScreen.routeName: (context) => SuccessScreen(),
       },
       navigatorKey: navigatorKey,
     );

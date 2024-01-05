@@ -83,10 +83,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                       height: 24,
                                     ),
                                     SizedBox(width: 20),
-                                    SvgPicture.asset(
-                                      'assets/images/top-notification.svg',
-                                      width: 24,
-                                      height: 24,
+                                    GestureDetector(
+                                      onTap: () {
+                                        // Navigate to NotificationScreen
+                                        // Navigator.pushNamed(context,
+                                        //     NotificationScreen.routeName);
+                                      },
+                                      child: SvgPicture.asset(
+                                        'assets/images/top-notification.svg',
+                                        width: 24,
+                                        height: 24,
+                                      ),
                                     ),
                                   ],
                                 ),
